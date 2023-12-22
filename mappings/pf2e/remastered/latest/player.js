@@ -27,6 +27,10 @@ class MappingClass extends baseMapping {
     createMappings() {
         super.createMappings();
 
+        /* Set images */
+        /* Set actor image */
+        this.setImage(this.actor.img, 2, 30, 600, 100, 200);
+
         /* Ancestry Section*/
         this.setCalculated("ancestry", this.actor.ancestry.name);
         this.setCalculated("heritage_and_traits", this.actor.heritage.name);
@@ -74,7 +78,6 @@ class MappingClass extends baseMapping {
         this.setCalculated("shield_current_hp", this.actor.items.filter(i => i.system.category === 'shield' && i.isEquipped).map(i => i.system.hp.value)[0] || '-');
 
         /* Armor proficiencies */
-        /* TODO: this gives error
         Object.keys(this.actor.system.proficiencies.defenses).forEach(
             (d) => {
                 this.setCalculated(`defense_${d}_trained`, this.actor.system.proficiencies.defenses[d].rank >= 1 || false );
@@ -83,7 +86,7 @@ class MappingClass extends baseMapping {
                 this.setCalculated(`defense_${d}_legendary`, this.actor.system.proficiencies.defenses[d].rank >= 4 || false );
             }
         );
-*/
+
         /* Saving Throws */
         Object.keys(this.actor.saves).forEach(
             (s) => {
@@ -98,8 +101,6 @@ class MappingClass extends baseMapping {
             }
         );
 
-        // Set test image
-        this.setImage(this.actor.img, 2, 30, 600, 100, 200);
 
     }
 
