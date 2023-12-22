@@ -3,6 +3,14 @@ import baseMapping from "../../../../scripts/baseMapping.js";
 
 class MappingClass extends baseMapping {
     pdfUrl = "/modules/sheet-export/mappings/pf2e/remastered/latest/pf2e-remastered.pdf";
+    authors = [
+        {
+            "name": "bushvin",
+            "url": "https://blog.elaba.net",
+            "lemmy": "https://lemmy.world/u/bushvin",
+            "github": "https://github.com/bushvin"
+        }
+    ];
 
     formatModifier(mod) {
         /* Format the modifier correctly with a + sign if needed */

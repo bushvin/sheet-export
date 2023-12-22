@@ -33,6 +33,7 @@ class baseMapping {
     }
 
     pdfUrl = "";
+    authors = [];
 
     log(severity, message, options) {
         /* A wrapper around the foundry vtt logger or `console`, whichever is present */
