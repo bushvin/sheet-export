@@ -29,9 +29,10 @@ class baseMapping {
         this.imageMappings = [];
         this.logPrefix = "Export Sheet";
         this.systemName = "test";
-        this.setPdfUrl();
         this.createMappings();
     }
+
+    pdfUrl = "";
 
     log(severity, message, options) {
         /* A wrapper around the foundry vtt logger or `console`, whichever is present */
@@ -140,14 +141,10 @@ class baseMapping {
         this.fieldMappings = [];
     }
 
-    setPdfUrl() {
-        this.pdfUrl = "";
-    }
-
     get fields() {
         return this.fieldMappings;
     }
-    
+
     get images() {
         return this.imageMappings;
     }

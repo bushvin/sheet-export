@@ -2,6 +2,7 @@
 import baseMapping from "../../../../scripts/baseMapping.js";
 
 class MappingClass extends baseMapping {
+    pdfUrl = "/modules/sheet-export/mappings/pf2e/remastered/latest/pf2e-remastered.pdf";
 
     formatModifier(mod) {
         /* Format the modifier correctly with a + sign if needed */
@@ -12,11 +13,6 @@ class MappingClass extends baseMapping {
         } else {
             return (parseInt(mod) < 0) ? mod : `+${mod}`;
         }
-    }
-
-    // Override setPdfUrl method from base class
-    setPdfUrl() {
-        this.pdfUrl = "/modules/sheet-export/mappings/pf2e/remastered/latest/pf2e-remastered.pdf";
     }
 
     // override createMappings method from base class
