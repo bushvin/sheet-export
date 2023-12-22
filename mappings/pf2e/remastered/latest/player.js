@@ -14,7 +14,7 @@ class MappingClass extends baseMapping {
 
     formatModifier(mod) {
         /* Format the modifier correctly with a + sign if needed */
-        if (typeof (mod) === "undefined") {
+        if (typeof(mod) === "undefined") {
             return mod;
         } else if (isNaN(parseInt(mod))) {
             return mod;
